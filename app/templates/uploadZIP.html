@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Upload zip file</h1>
+    <h2>Select product number and zip file</h2>
+        <body>
+            <form action = "/uploadZIP" method = "POST" enctype = "multipart/form-data">
+                <label for="selectedNbr"> Select product number </label>
+                <div>
+                    <select name="selectedNbr" required>
+                            <option disabled selected value> Select a product number </option>
+                        {% for nbr in productNbr %}
+                            <option value="{{nbr}}">{{ nbr }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <label for="file">Choose zip file</label>
+                <div>
+                    <input type = "file" name = "file" required>
+                    <div>
+                            {% if fileMessage %}
+                                <output type="text"> Invalid file </output>
+                            {% endif %}
+                        </div>
+                </div>
+                <input type = "submit"/>
+            </form>
+            <div>
+                    {% if scriptMessage %}
+                        <output type="text"> {{ scriptMessage}} </output>
+                    {% endif %}
+            </div>
+        </body>
+
+{% endblock %}

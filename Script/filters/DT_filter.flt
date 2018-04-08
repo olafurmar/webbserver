@@ -1,0 +1,11 @@
+//History
+//Approvers
+//AdditionalAttribute[@name='Version Notes']
+//Item[@globalProductTypeCode='Product Assembly']/Attachments
+//Item[.//*/@manufacturedBy='Dreamtech']//ApprovedManufacturerListItem[not(@manufacturedBy='Dreamtech')]
+//SupplierPart[@supplierName=//Item[.//*/@manufacturedBy='Dreamtech']//ApprovedManufacturerListItem[not(@manufacturedBy='Dreamtech')]/@manufacturedBy]
+//ManufacturerPart[.//@suppliedBy=//Item[.//*/@manufacturedBy='Dreamtech']//ApprovedManufacturerListItem[not(@manufacturedBy='Dreamtech')]/@manufacturedBy]
+//ApprovedManufacturerListItem[@manufacturedBy=//ManufacturerPart[.//@suppliedBy=//Item[.//*/@manufacturedBy='Dreamtech']//ApprovedManufacturerListItem[not(@manufacturedBy='Dreamtech')]/@manufacturedBy]/@manufacturerName]
+//Contact[@contactName=//Item[.//*/@manufacturedBy='Dreamtech']//ApprovedManufacturerListItem[not(@manufacturedBy='Dreamtech')]/@manufacturedBy]
+//Contact[@contactName=//ManufacturerPart[.//@suppliedBy=//Item[.//*/@manufacturedBy='Dreamtech']//ApprovedManufacturerListItem[not(@manufacturedBy='Dreamtech')]/@manufacturedBy]/@manufacturerName]
+//Attachments[not(Attachment[not(contains(lower-case(@universalResourceIdentifier), 'annotated'))])] | //Attachments/Attachment[contains(lower-case(@universalResourceIdentifier), 'annotated')]

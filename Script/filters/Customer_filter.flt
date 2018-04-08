@@ -1,0 +1,4 @@
+//History
+//Approvers
+//AdditionalAttribute[@name='Version Notes']
+//Attachments[not(Attachment[not(contains(lower-case(@universalResourceIdentifier), 'annotated'))])] | //Attachments/Attachment[contains(lower-case(@universalResourceIdentifier), 'annotated')]

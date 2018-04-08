@@ -1,0 +1,17 @@
+<html>
+	<head>
+		{% if title %}
+		<title>{{ title }} - Flatfrog webbserver</title>
+		{% else %}
+		<title> Welcome to webbserver </title>
+		{% endif %}
+	</head>
+	<body>
+        <div>Webbserver:
+			<a href="{{ url_for('uploadCSV') }}">Upload file</a>
+		</div>
+	{% block content %}
+	{% endblock %}
+	
+	</body>
+</html>
